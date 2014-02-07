@@ -1,0 +1,8 @@
+@mixin box-line($color)
+  border: 1px solid $color
+
+.box-b
+  @include box-line(#000)
+
+.box-r
+  @include box-line(#f00)
