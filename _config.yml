@@ -1,6 +1,9 @@
-name: Your New Jekyll Site
+name: "Sibevin's Notebook"
 markdown: redcarpet
 pygments: true
 encoding: UTF-8
 tag_page_layout: tag_page
 tag_page_dir: tag
+
+gems:
+ - jekyll-compass
