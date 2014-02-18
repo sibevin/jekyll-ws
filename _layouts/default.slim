@@ -8,22 +8,69 @@ html
     link rel="stylesheet" href="/css/syntax.css"
     link rel="stylesheet" href="/css/main.css"
     link rel="stylesheet" href="/css/snb.css"
+    link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
   body
     .site
-      .header.box-r
-        h1.title
-          a href="/"
+      .menu
+        .tab
+          .tab-title
             | {{ site.name }}
-        a.extra href="/" home
-        .tag-cloud
-          | {{ site | tag_cloud }}
-      | {{ content }}
-      .footer
-        .contact
-          p
-            | Sibevin Wang
-            br
-            | sibevin@gmail.com
-        .contact
-          p
-            a href="https://github.com/sibevin" github.com/sibevin
+        .tab
+          a href="/" target="_self"
+            | 文章列表
+            i.fa.fa-bars
+        .tab
+          a href="/" target="_self"
+            | 分類
+            i.fa.fa-tag
+        .tab
+          a href="/" target="_self"
+            | 作品集
+            i.fa.fa-folder-open
+        .tab
+          a href="/" target="_self"
+            | 關於作者
+            i.fa.fa-pencil
+        .tab
+          javascript:
+            (function() {
+              var cx = '013628015245763916308:gqjc6x1uphy';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+              '//www.google.com/cse/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          gcse:search
+        .link
+          a href="https://github.com/sibevin" target="_blank"
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-github-alt.fa-stack-1x.fa-inverse
+        .link
+          a href="http://stackoverflow.com/users/232710" target="_blank"
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-stack-overflow.fa-stack-1x.fa-inverse
+        .link
+          a href="https://twitter.com/sibevin" target="_blank"
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        .link
+          a href="mailto:sibevin@gmail.com" target="_top"
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-envelope.fa-stack-1x.fa-inverse
+      .main
+        .header.box-r
+          h1.title
+            a href="/"
+              | {{ page.title }}
+          a.extra href="/" home
+          .tag-cloud
+            | {{ site | tag_cloud }}
+        .content
+          | {{ content }}

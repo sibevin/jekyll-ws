@@ -1,3 +1,6 @@
+@import "compass"
+@import "compass/css3"
+
 @mixin box-line($color)
   border: 1px solid $color
 
@@ -6,3 +9,80 @@
 
 .box-r
   @include box-line(#f00)
+
+$menu_w: 240px
+$icon_s: 36px
+$icon_fs: 22px
+
+//$clickable_c: #aaf
+//$hover_c: #55f
+$clickable_c: #ccc
+$hover_c: #000
+
+.site
+  width: 100%
+  .menu
+    overflow-x: auto
+    overflow-y: hidden
+    position: fixed
+    top: 0px
+    width: $menu_w
+    height: 100%
+    background: #fff
+    @include box-shadow(#333 0px 0px 10px)
+    .tab
+      text-align: right
+      margin: 10px
+      .tab-title
+        font-size: 24px
+        color: $clickable_c
+        line-height: $icon_s
+      a
+        line-height: $icon_s
+        color: $clickable_c
+        text-decoration: none
+        &:hover
+          color: $hover_c
+        i
+          &:hover
+            color: $hover_c
+            //border: 2 solid $hover_c
+          @include border-radius(5px)
+          line-height: $icon_s
+          color: $clickable_c
+          //border: 2 solid $clickable_c
+          line-height: $icon_s
+          font-size: $icon_fs
+          text-align: center
+          height: $icon_s
+          width: $icon_s
+          margin-left: 10px
+      .gsc-control-cse
+        padding: 0px
+        .gsc-search-button
+          input
+            &:hover
+              border: 2 solid $hover_c
+              background: $hover_c
+            @include border-radius(5px)
+            border: 2 solid $clickable_c
+            line-height: $icon_s
+            font-size: $icon_fs
+            text-align: center
+            width: $icon_s
+            background: $clickable_c
+            padding: 6px 11px
+            height: 13px
+            width: 13px
+            background: $clickable_c
+    .link
+      text-align: right
+      margin: 10px
+      a
+        color: $clickable_c
+        &:hover
+          color: $hover_c
+  .main
+    margin-left: $menu_w + 10px
+    .header
+    .content
