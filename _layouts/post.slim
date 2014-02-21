@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+.main-title
+  | {{ page.title }}
+
+.content
+  p.meta
+    i.fa.fa-clock-o
+    | {{ page.date | date_to_string }}
+  .post
+    | {{ content }}
