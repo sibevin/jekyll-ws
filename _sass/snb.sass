@@ -18,6 +18,9 @@ $icon_fs: 22px
 //$hover_c: #55f
 $clickable_c: #ccc
 $hover_c: #000
+$title_bg_c: #ccc
+$title_c: #fff
+$light_bg_c: #eee
 
 .site
   width: 100%
@@ -30,13 +33,23 @@ $hover_c: #000
     height: 100%
     background: #fff
     @include box-shadow(#333 0px 0px 10px)
+    .tab-title
+      width: 100%
+      margin-top: 8px
+      font-size: 20px
+      color: $title_c
+      line-height: $icon_s
+      background: $title_bg_c
+      text-align: center
+      padding: 8px 0px
+      a
+        color: $title_c
+        text-decoration: none
+        &:hover
+          color: $title_c
     .tab
       text-align: right
       margin: 10px
-      .tab-title
-        font-size: 24px
-        color: $clickable_c
-        line-height: $icon_s
       a
         line-height: $icon_s
         color: $clickable_c
@@ -82,7 +95,28 @@ $hover_c: #000
         color: $clickable_c
         &:hover
           color: $hover_c
-  .main
-    margin-left: $menu_w + 10px
-    .header
-    .content
+  .content
+    margin-left: $menu_w + 30px
+  .post
+    code
+      padding: 3px 5px
+      margin: 3px
+      background: $light_bg_c
+      border-width: 0
+    pre
+      padding: 13px
+      margin: 13px
+      background: $light_bg_c
+      border-width: 0
+      code
+        padding: 0px
+        margin: 0px
+        background: $light_bg_c
+  .main-title
+    margin-top: 8px
+    font-size: 20px
+    padding: 8px 0px 8px 30px
+    margin-left: $menu_w
+    color: $title_c
+    line-height: $icon_s
+    background: $title_bg_c
