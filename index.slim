@@ -8,12 +8,19 @@ title: 文章列表
   | 文章列表
 
 .content
-  ul.posts
-    |{% for post in site.posts %}
-    li
-      span
-        | {{ post.date }}
-      | &raquo;
-      a href="{{ post.url }}"
-        | {{ post.title }}
-    |{% endfor %}
+  .list
+    table
+      tbody
+        |{% for post in site.posts %}
+        tr.list-entry
+          td
+            i.fa.fa-file-o
+            a href="{{ post.url }}"
+              | {{ post.title }}
+          td
+            i.fa.fa-clock-o
+            | {{ post.date | date: "%Y-%m-%d" }}
+          td
+            i.fa.fa-tag
+            | {{ post | tags }}
+        |{% endfor %}

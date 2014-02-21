@@ -1,0 +1,18 @@
+---
+layout: default
+title: 分類
+---
+
+.main-title
+  i.fa.fa-tags
+  | 分類
+
+.content
+  .list
+    | {% for tag in site.tags %}
+    .list-entry
+      i.fa.fa-tag
+      a href="{{ tag | first | slugize }}.html"
+        | {{ tag | first }}
+        |  ({{ tag | last | size}})
+    | {% endfor  %}

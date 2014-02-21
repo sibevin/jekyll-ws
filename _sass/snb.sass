@@ -12,7 +12,6 @@
 
 $menu_w: 240px
 $icon_s: 36px
-$icon_fs: 22px
 
 //$clickable_c: #aaf
 //$hover_c: #55f
@@ -21,6 +20,18 @@ $hover_c: #000
 $title_bg_c: #ccc
 $title_c: #fff
 $light_bg_c: #eee
+
+$title_fs: 1.3em
+$icon_fs: 1.3em
+$link_icon_fs: 1.15em
+
+$default_fs: 16px
+
+.clear
+  clear: both
+
+body
+  font-size: $default_fs
 
 .site
   a
@@ -40,12 +51,12 @@ $light_bg_c: #eee
     .tab-title
       width: 100%
       margin-top: 8px
-      font-size: 20px
+      font-size: $title_fs
       color: $title_c
       line-height: $icon_s
       background: $title_bg_c
       text-align: center
-      padding: 8px 0px
+      padding: 6px 0px 0px
       a
         color: $title_c
         text-decoration: none
@@ -63,11 +74,9 @@ $light_bg_c: #eee
         i
           &:hover
             color: $hover_c
-            //border: 2 solid $hover_c
           @include border-radius(5px)
           line-height: $icon_s
           color: $clickable_c
-          //border: 2 solid $clickable_c
           line-height: $icon_s
           font-size: $icon_fs
           text-align: center
@@ -99,8 +108,11 @@ $light_bg_c: #eee
         color: $clickable_c
         &:hover
           color: $hover_c
+        .fa-stack
+          font-size: $link_icon_fs
   .content
     margin-left: $menu_w + 30px
+    margin-right: 8px
   .post
     code
       padding: 3px 5px
@@ -120,8 +132,8 @@ $light_bg_c: #eee
     i
       margin-right: 8px
     margin-top: 8px
-    font-size: 20px
-    padding: 8px 0px 8px 30px
+    font-size: $title_fs
+    padding: 6px 0px 0px 30px
     margin-left: $menu_w
     color: $title_c
     line-height: $icon_s
@@ -143,3 +155,30 @@ $light_bg_c: #eee
         color: $title_bg_c
         &:hover
           color: $title_bg_c
+  .tag-list
+    margin-top: 24px
+    .tag-entry
+      margin: 8px
+      color: $title_bg_c
+      i
+        margin-right: 5px
+      a
+        text-decoration: none
+        color: $title_bg_c
+        &:hover
+          color: $title_bg_c
+  .list
+    margin-top: 24px
+    .list-entry
+      padding: 8px
+      color: $title_bg_c
+      i
+        margin-right: 5px
+      a
+        text-decoration: none
+        color: $title_bg_c
+        &:hover
+          color: $title_bg_c
+      .list-title
+      .list-time
+      .list-tag
