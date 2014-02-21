@@ -12,8 +12,8 @@ html
   body
     .site
       .menu
-        .tab
-          .tab-title
+        .tab-title
+          a href="/" target="_self"
             | {{ site.name }}
         .tab
           a href="/" target="_self"
@@ -65,12 +65,6 @@ html
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-envelope.fa-stack-1x.fa-inverse
       .main
-        .header.box-r
-          h1.title
-            a href="/"
-              | {{ page.title }}
-          a.extra href="/" home
-          .tag-cloud
-            | {{ site | tag_cloud }}
+        .header
         .content
-          | {{ content }}
+        | {{ content }}
