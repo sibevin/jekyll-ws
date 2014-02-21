@@ -23,6 +23,10 @@ $title_c: #fff
 $light_bg_c: #eee
 
 .site
+  a
+    color: $hover_c
+    &:hover
+      color: $hover_c
   width: 100%
   .menu
     overflow-x: auto
@@ -113,6 +117,8 @@ $light_bg_c: #eee
         margin: 0px
         background: $light_bg_c
   .main-title
+    i
+      margin-right: 8px
     margin-top: 8px
     font-size: 20px
     padding: 8px 0px 8px 30px
@@ -120,3 +126,20 @@ $light_bg_c: #eee
     color: $title_c
     line-height: $icon_s
     background: $title_bg_c
+  .meta
+    margin-top: 8px
+    font-size: 16px
+    color: $title_bg_c
+    i
+      margin-right: 5px
+    .time-area
+      float: right
+      margin-left: 20px
+      margin-right: 8px
+    .tag-area
+      float: right
+      a
+        text-decoration: none
+        color: $title_bg_c
+        &:hover
+          color: $title_bg_c
