@@ -7,3 +7,5 @@ tag_page_dir: tag
 
 gems:
  - jekyll-compass
+
+excerpt_separator: "" # walk-around for the "Tag was never closed" bug
