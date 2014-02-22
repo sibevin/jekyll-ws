@@ -6,10 +6,18 @@ layout: default
   i.fa.fa-tag
   | {{ page.tag }}
 .content
-  ul
+  .list
     | {% for post in page.posts %}
-    li
-      a href="{{ post.url }}"
-        | {{ post.title }}
-      | ({{ post.date | date_to_string }} | Tags: {{ post | tags }})
+    .list-entry
+      .list-title
+        i.fa.fa-file-o
+        a href="{{ post.url }}"
+          | {{ post.title }}
+      .list-time
+        i.fa.fa-clock-o
+        | {{ post.date | date: "%Y-%m-%d" }}
+      .list-tag
+        i.fa.fa-tag
+        | {{ post | tags }}
+    .clear
     | {% endfor %}
