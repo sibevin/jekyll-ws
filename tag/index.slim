@@ -11,8 +11,9 @@ title: 分類
   .list
     | {% for tag in site.tags %}
     .list-entry
-      i.fa.fa-tag
-      a href="{{ tag | first | slugize }}.html"
-        | {{ tag | first }}
-        |  ({{ tag | last | size}})
+      .list-title
+        i.fa.fa-tag
+        a href="{{ tag | first | slugize }}.html"
+          | {{ tag | first }}
+          |  ({{ tag | last | size}})
     | {% endfor  %}
