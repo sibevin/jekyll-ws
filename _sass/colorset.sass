@@ -1,0 +1,94 @@
+@import "compass"
+@import "compass/css3"
+
+
+//$middle: #aaf
+//$all_dark: #55f
+
+$gray_all_dark_c: #000
+$gray_dark_c: #666
+$gray_middle_c: #ccc
+$gray_light_c: #eee
+$gray_all_light_c: #fff
+
+$blue_all_dark_c: #00d
+$blue_dark_c: #88f
+$blue_middle_c: #aaf
+$blue_light_c: #eef
+$blue_all_light_c: #fff
+
+@mixin color-skin($all_light, $light, $middle, $dark, $all_dark)
+  .site
+    a
+      color: $all_dark
+      &:hover
+        color: $all_dark
+    .menu
+      .tab-title
+        color: $all_light
+        background: $middle
+        a
+          color: $all_light
+          &:hover
+            color: $all_light
+      .tab
+        a
+          color: $middle
+          &:hover
+            color: $all_dark
+          i
+            color: $middle
+            &:hover
+              color: $all_dark
+        .gsc-control-cse
+          .gsc-search-button
+            input
+              border: 2 solid $middle
+              background: $middle
+              &:hover
+                border: 2 solid $all_dark
+                background: $all_dark
+      .link
+        a
+          color: $middle
+          &:hover
+            color: $all_dark
+    .post
+      code
+        background: $light
+      pre
+        background: $light
+        code
+          background: $light
+    .main-title
+      color: $all_light
+      background: $middle
+    .meta
+      color: $middle
+      .tag-area
+        a
+          color: $middle
+          &:hover
+            color: $middle
+    .tag-list
+      .tag-entry
+        color: $middle
+        a
+          color: $middle
+          &:hover
+            color: $middle
+    .list
+      .list-entry
+        &:hover
+          background: $light
+        color: $dark
+        a
+          color: $dark
+          &:hover
+            color: $all_dark
+
+.rock
+  @include color-skin($gray_all_light_c, $gray_light_c, $gray_middle_c, $gray_dark_c, $gray_all_dark_c)
+
+.sea
+  @include color-skin($blue_all_light_c, $blue_light_c, $blue_middle_c, $blue_dark_c, $blue_all_dark_c)
