@@ -17,6 +17,7 @@ $tab_fs: 20px
 $link_icon_fs: 20px
 $title_fs: 24px
 $title_h: 48px
+$header_m: 12px
 
 //$clickable_c: #aaf
 //$hover_c: #55f
@@ -37,7 +38,21 @@ $code_fs: 0.8em
 body
   font-size: $default_fs
 
+@mixin header-style($font_size)
+  color: $default_fc
+  border-bottom: 2 solid $title_bg_c
+  margin: $header_m 8px
+  padding: 0px 8px 5px
+  font-size: $font_size
+  font-weight: normal
+
 .site
+  h1
+    @include header-style(1.5em)
+  h2
+    @include header-style(1.2em)
+  h3, h4, h5
+    @include header-style(1.1em)
   a
     color: $hover_c
     &:hover

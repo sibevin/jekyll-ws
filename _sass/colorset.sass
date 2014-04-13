@@ -1,24 +1,11 @@
 @import "compass"
 @import "compass/css3"
 
-
-//$middle: #aaf
-//$all_dark: #55f
-
-$gray_all_dark_c: #000
-$gray_dark_c: #666
-$gray_middle_c: #ccc
-$gray_light_c: #eee
-$gray_all_light_c: #fff
-
-$blue_all_dark_c: #00d
-$blue_dark_c: #88f
-$blue_middle_c: #aaf
-$blue_light_c: #eef
-$blue_all_light_c: #fff
-
 @mixin color-skin($all_light, $light, $middle, $dark, $all_dark)
   .site
+    h1, h2, h3, h4, h5, h6
+      color: $dark
+      border-bottom: 2 solid $light
     a
       color: $all_dark
       &:hover
@@ -87,8 +74,29 @@ $blue_all_light_c: #fff
           &:hover
             color: $all_dark
 
+$gray_all_dark_c: #000
+$gray_dark_c: #666
+$gray_middle_c: #ccc
+$gray_light_c: #eee
+$gray_all_light_c: #fff
+
 .rock
   @include color-skin($gray_all_light_c, $gray_light_c, $gray_middle_c, $gray_dark_c, $gray_all_dark_c)
 
+$blue_all_dark_c: #00d
+$blue_dark_c: #88f
+$blue_middle_c: #aaf
+$blue_light_c: #eef
+$blue_all_light_c: #fff
+
 .sea
   @include color-skin($blue_all_light_c, $blue_light_c, $blue_middle_c, $blue_dark_c, $blue_all_dark_c)
+
+$red_all_dark_c: #d00
+$red_dark_c: #f88
+$red_middle_c: #faa
+$red_light_c: #fee
+$red_all_light_c: #fff
+
+.rose
+  @include color-skin($red_all_light_c, $red_light_c, $red_middle_c, $red_dark_c, $red_all_dark_c)
