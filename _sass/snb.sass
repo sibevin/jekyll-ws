@@ -41,15 +41,15 @@ body
 
 @mixin header-style($font_size)
   color: $default_fc
-  border-bottom: 2 solid $title_bg_c
-  margin: $header_m 8px
-  padding: 0px 8px 5px
+  margin: $header_m 0px
+  padding: 8px 8px 5px 0px
   font-size: $font_size
   font-weight: normal
 
 .site
   h1
     @include header-style(1.5em)
+    border-bottom: 2 solid $title_bg_c
   h2
     @include header-style(1.2em)
   h3, h4, h5
